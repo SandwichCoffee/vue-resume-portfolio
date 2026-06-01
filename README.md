@@ -1,42 +1,13 @@
-# vue-resume-portpolio
+# Vue Resume Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+React로 구현했던 이력서형 포트폴리오 페이지를 Vue 3와 TypeScript 기반으로 재구현한 프로젝트입니다.
 
-## Recommended IDE Setup
+기존 React 컴포넌트 구조를 Vue SFC 구조로 옮기며, 프로필/기술스택/경력/프로젝트 데이터를 분리하고 재사용 가능한 섹션 컴포넌트로 구성했습니다.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 기술 스택
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Vue 3
+- TypeScript
+- Vite
+- CSS
+- lucide-vue-next
