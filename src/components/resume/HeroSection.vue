@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import { Github, Mail, ExternalLink } from 'lucide-vue-next'
+import { Github, Mail, ArrowLeft } from 'lucide-vue-next'
 import { profile } from '@/data/profile'
 import { copyEmail } from '@/utils/clipboard'
 
+const PORTFOLIO_URL = 'https://sandwichcoffee.github.io/ReactProject/'
+
 const heroLinks = [
-  {
-    id: 1,
-    label: 'GitHub',
-    url: profile.githubUrl,
-    icon: Github,
-  },
-  {
-    id: 2,
-    label: 'Portfolio',
-    url: profile.portfolioUrl ?? '#',
-    icon: ExternalLink,
-  }
+    {
+        id: 1,
+        label: 'GitHub',
+        url: profile.githubUrl,
+        icon: Github,
+    }
 ]
 
+const handleGoBack = () => {
+  window.location.href = PORTFOLIO_URL
+}
+
 const handleCopyEmail = () => {
-  copyEmail(profile.email)
+    copyEmail(profile.email)
 }
 </script>
 
@@ -30,16 +30,16 @@ const handleCopyEmail = () => {
         <p class="description">{{ profile.description }}</p>
 
         <div class="link-area">
-            <a v-for="link in heroLinks" :key="link.id" :href="link.url" target="_blank" rel="noreferrer" class="link-button">
+            <a v-for="link in heroLinks" :key="link.id" :href="link.url" target="_blank" rel="noreferrer"
+                class="link-button">
                 <component :is="link.icon" class="link-icon" />
                 {{ link.label }}
             </a>
-            <button
-                type="button"
-                class="link-button"
-                aria-label="이메일 주소 복사"
-                @click="handleCopyEmail"
-            >
+            <button type="button" class="link-button" aria-label="포트폴리오로 돌아가기" @click="handleGoBack">
+                <ArrowLeft class="link-icon" />
+                <span>포트폴리오 페이지</span>
+            </button>
+            <button type="button" class="link-button" aria-label="이메일 주소 복사" @click="handleCopyEmail">
                 <Mail class="link-icon" />
                 <span>Email</span>
             </button>
